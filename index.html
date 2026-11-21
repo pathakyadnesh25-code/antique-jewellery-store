@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover elegant anti-tarnish jewellery for everyday beauty. Shop necklaces, earrings, bracelets and rings.">
+  <meta name="theme-color" content="#fffaf5">
+  <title>AURA | Anti-Tarnish Jewellery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Announcement -->
+  <div class="announcement">
+    ✨ Discover your everyday elegance | Welcome to AURA
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <button class="icon-btn mobile-menu-btn" id="menuToggle" aria-label="Open menu">☰</button>
+
+      <a href="#" class="logo">
+        <span>AURA</span>
+        <small>ANTI-TARNISH JEWELLERY</small>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#products">Shop</a>
+        <a href="#about">Our Story</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button>
+        <button class="icon-btn" id="wishlistToggle" aria-label="Wishlist">♡</button>
+        <button class="icon-btn cart-button" id="cartToggle" aria-label="Shopping cart">
+          ♧ <span id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <input type="search" id="searchInput" placeholder="Search necklaces, earrings, rings...">
+      <button id="searchButton">Search</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">BEAUTY THAT STAYS</span>
+        <h1>Everyday Elegance.<br><em>Forever Beautiful.</em></h1>
+        <p>Discover thoughtfully selected anti-tarnish jewellery that adds a little luxury to every moment.</p>
+        <a href="#products" class="primary-btn">Explore Collection <span>→</span></a>
+        <div class="hero-note">TIMELESS STYLE • EVERYDAY BEAUTY</div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1000&q=85"
+          alt="Elegant gold jewellery collection">
+        <div class="hero-image-caption">
+          <span>THE EVERYDAY EDIT</span>
+          <strong>Made to shine.</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+      <div><span>✧</span><strong>Elegant Designs</strong><small>For every occasion</small></div>
+      <div><span>◇</span><strong>Anti-Tarnish Finish</strong><small>Carefully selected styles</small></div>
+      <div><span>♡</span><strong>Gift Worthy</strong><small>Beautiful gifting options</small></div>
+      <div><span>✦</span><strong>Easy Shopping</strong><small>Simple ordering experience</small></div>
+    </section>
+
+    <!-- Collections -->
+    <section class="section collections-section" id="collections">
+      <div class="section-heading">
+        <span class="eyebrow">FIND YOUR STYLE</span>
+        <h2>Explore Collections</h2>
+        <p>Little details. Beautiful statements.</p>
+      </div>
+
+      <div class="collection-grid">
+        <button class="collection-card" data-category="Necklaces">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80" alt="Necklaces">
+          <span>Necklaces</span>
+        </button>
+        <button class="collection-card" data-category="Earrings">
+          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80" alt="Earrings">
+          <span>Earrings</span>
+        </button>
+        <button class="collection-card" data-category="Bracelets">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80" alt="Bracelets">
+          <span>Bracelets</span>
+        </button>
+        <button class="collection-card" data-category="Rings">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=80" alt="Rings">
+          <span>Rings</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section products-section" id="products">
+      <div class="section-heading">
+        <span class="eyebrow">THE AURA COLLECTION</span>
+        <h2>Our Best Picks</h2>
+        <p>Find the pieces that feel like you.</p>
+      </div>
+
+      <div class="shop-toolbar">
+        <div class="filters" id="categoryFilters">
+          <button class="filter-btn active" data-category="All">All</button>
+          <button class="filter-btn" data-category="Necklaces">Necklaces</button>
+          <button class="filter-btn" data-category="Earrings">Earrings</button>
+          <button class="filter-btn" data-category="Bracelets">Bracelets</button>
+          <button class="filter-btn" data-category="Rings">Rings</button>
+        </div>
+
+        <select id="sortProducts" aria-label="Sort products">
+          <option value="default">Sort: Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Products generated using JavaScript -->
+      </div>
+    </section>
+
+    <!-- Brand story -->
+    <section class="story-section" id="about">
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1000&q=85" alt="Elegant jewellery details">
+      </div>
+      <div class="story-content">
+        <span class="eyebrow">THE AURA PHILOSOPHY</span>
+        <h2>Beauty in every little detail.</h2>
+        <p>We believe jewellery is more than an accessory. It is a reflection of your personality, your confidence and your everyday moments.</p>
+        <p>Explore a collection selected to bring effortless elegance to your everyday style.</p>
+        <a href="#products" class="primary-btn">Discover AURA →</a>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <span class="eyebrow">STAY IN THE LOOP</span>
+      <h2>A little sparkle in your inbox.</h2>
+      <p>Follow our journey and discover new arrivals and collections.</p>
+      <a href="#contact" class="primary-btn">Get in Touch</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="logo footer-logo">
+          <span>AURA</span>
+          <small>ANTI-TARNISH JEWELLERY</small>
+        </a>
+        <p>Everyday elegance, thoughtfully selected for you.</p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#products">Shop</a>
+      </div>
+
+      <div>
+        <h3>Customer Care</h3>
+        <a href="#contact">Contact Us</a>
+        <a href="#" id="shippingLink">Shipping Information</a>
+        <a href="#" id="policyLink">Privacy Policy</a>
+      </div>
+
+      <div>
+        <h3>Connect With Us</h3>
+        <p>Have a question? We would love to help.</p>
+        <a id="footerWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp Us →</a>
+        <a id="footerInstagram" href="#" target="_blank" rel="noopener">Instagram →</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> AURA Jewellery. All rights reserved.</p>
+      <p>Made with ♡</p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h2>Your Shopping Bag</h2>
+      <button class="close-btn" id="closeCart">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <strong>Subtotal</strong>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <p>Shipping charges, if any, will be confirmed before ordering.</p>
+      <button class="primary-btn checkout-btn" id="checkoutButton">Order on WhatsApp →</button>
+      <button class="continue-btn" id="continueShopping">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <!-- Wishlist drawer -->
+  <aside class="wishlist-drawer" id="wishlistDrawer">
+    <div class="drawer-header">
+      <h2>Your Wishlist</h2>
+      <button class="close-btn" id="closeWishlist">×</button>
+    </div>
+    <div class="wishlist-items" id="wishlistItems"></div>
+  </aside>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
